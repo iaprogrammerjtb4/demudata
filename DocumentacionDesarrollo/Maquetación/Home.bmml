@@ -1,0 +1,50 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="875" measuredH="496" mockupW="842" mockupH="496">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="379" y="117" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>logoAnimated</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="345" y="102" w="165" h="155" measuredW="350" measuredH="350" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../WEBs/logoV1.png</src>
+        <text>Logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="243" y="247" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>option%20user</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="396" y="327" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>option%20demu%20data</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Image" x="530" y="246" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>option%20about</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::IconLabel" x="793" y="108" w="-1" h="-1" measuredW="58" measuredH="63" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <color>10027263</color>
+        <labelPosition>bottom</labelPosition>
+        <text>nikeName</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="__group__" x="33" y="0" w="842" h="496" measuredW="842" measuredH="496" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="842" h="496" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="8">
+          <controlProperties>
+            <color>9338051</color>
+            <text>A%20Web%20Page%0Ahttp%3A//damudata.iaprogram.com/home</text>
+            <value>0</value>
+            <verticalScrollbar>true</verticalScrollbar>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>
