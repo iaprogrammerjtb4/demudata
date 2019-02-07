@@ -1,0 +1,45 @@
+.bodyWelcome
+{
+	background-image: url('../img/fondoEdificiosRosa.jpg');
+	background-position: center;
+	height: 600px;	
+}
+
+.iconUser
+{
+	width: 100%;	
+	opacity: 0.1;
+}
+.iconUser:hover
+{
+	transition: all 1s;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.logoGif
+{		
+	filter:blur(6px);
+	opacity: 0.4;
+	cursor: pointer;
+}
+.logoGif:hover
+{
+	filter:blur(0px);
+	transition: all 0.4s;
+	opacity: 1;	
+}
+
+.logoGifPeque
+{
+	filter:blur(6px);
+	opacity: 0.4;
+	cursor: pointer;
+	width: 40%;
+	height: 75%;
+}
+.logoGifPeque:hover{
+	filter:blur(0px);
+	transition: all 0.4s;
+	opacity: 1;	
+}
