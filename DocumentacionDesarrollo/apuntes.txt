@@ -6,11 +6,7 @@ https://publicdomainvectors.org/photos/man-of-troy.png
 Agregar la opción de verlo en pantalla completa
 
 Pasos a seguir:
--Maquetación balsamiq = definir identidad del setío
-	- creación de medias para el diseño
-	- Fuentes y colores a implementar
 -Maquetación html, bootstrap = definir estructura y DResponsive
-	- Creación del proyecto en laravel
 	- Componentes necesarios (gráficos y/o média)
 	- Códificar proyecto
 -Implementación con react y frameworks de animaciones js = personalidad y toques finales 
@@ -20,3 +16,6 @@ Pasos a seguir:
 	- creación de menus interactivos a y b
 	- Script para animaciones
 	- integración de script a la navegación
+
+VOY EN 
+PORTAL falta hacer el menub, se agrego un css y js pero no son fucionales y de eso solo falta las gráficas de muestra, el texto, img y demás para que se vea contenido

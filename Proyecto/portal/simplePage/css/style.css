@@ -4,6 +4,18 @@
 	background-position: center;
 	height: 600px;	
 }
+.bodyNav1
+{
+	background-image: url('../img/fondoEdificiosWhite.jpg');
+	background-position: center;
+	height: 600px;	
+}
+.bodyUsers, .bodyAbout
+{
+	background-color: #bdbef6;
+	background-position: 10% 20%;
+	height: 600px;	
+}
 
 .iconUser
 {
@@ -42,4 +54,16 @@
 	filter:blur(0px);
 	transition: all 0.4s;
 	opacity: 1;	
+}
+
+.fontGif
+{
+	font-size: 15px;
+	color: #199bea;
+}
+.fontGif:hover
+{
+	font-size: 17px;
+	transition: all 0.4s;
+	color: #4726db;
 }

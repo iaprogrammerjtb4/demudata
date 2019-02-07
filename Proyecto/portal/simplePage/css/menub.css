@@ -1,0 +1,121 @@
+.smartphone-viewport {
+  --unit: 5vh;
+  height: calc(var(--unit) * 16);
+  width: calc(var(--unit) * 9); 
+  background: url(https://static.pexels.com/photos/310386/pexels-photo-310386.jpeg) center center / cover;
+  margin: auto;
+  box-shadow: 0 20px 20px -10px #000;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "Hola EDteam";
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    z-index: 100;
+    font-family: Open Sans;
+  }
+  
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent,rgba(#000,.6));
+  }
+}
+
+:root {
+  --animation-time: .3s;
+}
+
+$color: hsl(200,100,60);
+$elements: 4;
+
+.float-button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: $color;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+  transition: transform var(--animation-time);
+  cursor: pointer;
+  
+  &.pulsed {
+    transform: rotate(45deg);
+    background: darken($color,15)
+  }
+  
+  &::before,
+  &::after {
+    position: absolute;
+    width: 40%;
+    height: 4%;
+    content: '';
+    top: 49%;
+    left: 30%;
+    background: #fff;
+  }
+  
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.circular-menu {
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  background: $color;
+  bottom: -5.5rem;
+  right: -5.5rem;
+  border-radius: 50%;
+  transform: scale(0) rotate(-180deg);
+  opacity: 0;
+  transition: all var(--animation-time);
+  z-index: 50;
+  
+  &.expand {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.5rem;
+  }
+  
+  a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+  }
+  
+  li {
+    position: absolute;
+    width: 2rem;
+    top: 2rem;
+    left: calc(50% - 1rem);
+    transform-origin: center 6rem;
+    text-align: center;
+  }
+}
+
+@for $i from 2 through $elements {
+  .circular-menu li:nth-child(#{$i}) {
+    $rotation: (90 / ($elements - 1)) * ($i - 1);
+    transform: rotate(-#{$rotation}deg);
+    a { 
+      transform: rotate(#{$rotation}deg)  
+    }
+  }
+}
