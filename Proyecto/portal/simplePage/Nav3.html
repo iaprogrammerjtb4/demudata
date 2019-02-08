@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="es">
+  <style>
+    canvas{
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
   <head>
+    <!--script para los gráficos-->    
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <!--script para los gráficos fin-->
     <!--functions javascript --->
     <script type="text/javascript" src="js/functions.js"></script>
     <!--functions javascript --->
@@ -13,18 +24,31 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- menu b-->
+    <link rel="stylesheet" type="text/css" href="css/menub.css"/>
+    <script type="text/javascript" src="js/menub.js"></script>
+    <!-- menu b fin -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <title>Inversión</title>
   </head>
-  <body">
+  <body>
     <!-- este es el inicio-->
-    <section id="Welcome"  class="container mt-4 bodyWelcome">
+    <section id="Welcome"  class="container mt-4 bodyNav1">
+      <div class="spinner-grow text-muted"></div>
         <div class="row">
-          <div class="col-8 mt-5 col-md-11">            
-          </div>
+          <label class="col-2 mt-5 col-md-3" for="abrir-cerrar">
+            <span class="abrir">
+              <img class="abrir logoGifPeque rounded-circle " src="img/logGif.gif" alt="Logo gif"/>
+            </span>
+            <span class="cerrar">
+              <img for="abrir-cerrar" class="cerrar logoGifPeque" src="img/logGif.gif" alt="Logo gif"/>
+            </span>
+          </label> 
+          <div class="col-6 col-md-8"></div>
           <div class="col-4 col-md-1">            
             <div class="border text-center">
               <img src="img/user.png" class="iconUser rounded-circle" />                
@@ -33,24 +57,46 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5 mt-5 col-md-4">
+          <div class="col-2 mt-5 col-md-2">
+            <img  class="mw-100" src="img/señalar.png" width="250" height="100"/>
           </div>          
-          <label class="col-2 mt-5 col-md-4" for="abrir-cerrar">
-            <span class="abrir">
-              <img class="abrir logoGif rounded-circle " src="img/logGif.gif" alt="Logo gif"/>
-            </span>
-            <span class="cerrar">
-              <img for="abrir-cerrar" class="cerrar logoGif" src="img/logGif.gif" alt="Logo gif"/>
-            </span>
-          </label>                   
-          <div class="col-5 col-md-4">
+          <div class="col-8 w-75 col-md-8" for="abrir-cerrar">            
+            <!-- Nav pills -->
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#home">Capacidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logoGif text-secondary border border-secondary" data-toggle="pill" href="#menu1">Grupos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logoGif text-secondary border border-secondary" data-toggle="pill" href="#menu2">Investigadores</a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="home" class="container tab-pane active"><br>                
+                <img width="300" height="300" style="margin-left: 40%;" class="rounded rounded-circle" src="https://media.giphy.com/media/l2SpTXlLhThF29ai4/giphy-downsized.gif">
+              </div>
+              <div id="menu1" class="container tab-pane fade"><br>                                
+                <div class="chart-container">
+                  <canvas id="chart-legend-normal"></canvas>
+                </div>          
+              </div>
+              <div id="menu2" class="container tab-pane fade"><br>
+                <div class="chart-container">
+                  <canvas id="chart-legend-pointstyle"></canvas>
+                </div>        
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-12">
+
+          </div>                   
+          <div class="col-2 col-md-2">            
           </div>
-        </div>
-    </section>
+        </div>        
+    </section>    
     <!-- este es el fin del inicio-->
       <!--menuA-->
       <input type="checkbox" style="display: none;" id="abrir-cerrar" name="abrir-cerrar" value="">            
@@ -63,17 +109,15 @@
             </span>            
           </label>    
            <ul id="box" class="menu">              
+              <li class="navOp"><a href="index.html"><span class="txt">DemuData</span><img class="icon float-right" src="img/gafas.png" width="40" height="40"/></a></li>              
               <li class="navOp"><a href="l1.html"><span class="txt">Inversión en ACTI</span><img class="icon float-right" src="img/finanzas.png" width="40" height="40"/></a></li>
-              <li class="navOp"><a href="l2.html"><span class="txt">Formación</span><img class="icon float-right" src="img/gafas.png" width="40" height="40"/></a></li>
-              <li class="navOp"><a href="l3.html"><span class="txt">Capacidades</span><img class="icon float-right" src="img/capacidad.png" width="40" height="40"/></a></li>
+              <li class="navOp"><a href="l2.html"><span class="txt">Formación</span><img class="icon float-right" src="img/formacion.png" width="40" height="40"/></a></li>
               <li class="navOp"><a href="l4.html"><span class="txt">Producción cientifica</span><img class="icon float-right" src="img/ciencia.png" width="40" height="40"/></a></li>
           </ul>
       </div>
-      <!--menuA FIN-->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <!--menuA FIN-->     
+      <!--script para los gráficos-->
+    <script type="text/javascript" src="js/charts/point-style.js"></script>
+    <!--script para los gráficos fin--> 
   </body>
 </html>

@@ -67,3 +67,14 @@
 	transition: all 0.4s;
 	color: #4726db;
 }
+
+.divCharts
+{
+	opacity: 0.5;
+	background-color: white;
+}
+.divCharts:hover
+{
+	opacity: 0.5;
+	background-color: white;
+}

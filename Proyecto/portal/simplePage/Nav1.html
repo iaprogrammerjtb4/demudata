@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="es">
+  <style>
+    canvas{
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
   <head>
+    <!--script para los gráficos-->    
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <!--script para los gráficos fin-->
     <!--functions javascript --->
     <script type="text/javascript" src="js/functions.js"></script>
     <!--functions javascript --->
@@ -46,19 +57,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5 mt-5 col-md-4">
+          <div class="col-2 mt-5 col-md-2">
+            <img  class="mw-100" src="img/señalar.png" width="250" height="100"/>
           </div>          
-          <div class="col-2 mt-5 col-md-4" for="abrir-cerrar">            
-
+          <div class="col-8 w-75 col-md-8" for="abrir-cerrar">            
+            <canvas id="canvas"></canvas>
           </div>                   
-          <div class="col-5 col-md-4">
-          </div>
-        </div>
-        <div class="row">
-        <div class="col-10 col-md-10">            
-          <img  class="mw-100" src="img/señalar.png" width="250" height="100"/>
-        </div>
-          <div style="margin-top: 22%;" class="col-2 col-md-2">                        
+          <div class="col-2 col-md-2">
             <!-- menuB -->
             <ul  class="row list-group float-lg-right">
               <li class="logoGif list-group-item flex-sm-last"><b class="fontGif">Inversión</b></li>
@@ -87,6 +92,9 @@
               <li class="navOp"><a href="l4.html"><span class="txt">Producción cientifica</span><img class="icon float-right" src="img/ciencia.png" width="40" height="40"/></a></li>
           </ul>
       </div>
-      <!--menuA FIN-->      
+      <!--menuA FIN-->     
+      <!--script para los gráficos-->
+    <script type="text/javascript" src="js/charts/lineTime.js"></script>
+    <!--script para los gráficos fin--> 
   </body>
 </html>
